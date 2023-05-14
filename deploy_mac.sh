@@ -25,14 +25,15 @@ brew install armadillo # Armadillo is a high quality linear algebra library (mat
 brew install neovim
 brew install tree
 brew install wget
-brew install jq # json parse
-brew install gh # GitHub command-line tool
-brew install ripgrep
+brew install jq      # json parse
+brew install gh      # GitHub command-line tool
+brew install ripgrep # a pro grep
 brew install rename
-brew install pyenv
-brew install proxychains-ng
+brew install pyenv          # python vesion manager
+brew install proxychains-ng # proxy commandline
 brew install python@3.10
-brew install tmux
+brew install stow # congig dotfiles
+brew install tmux # session manager
 # brew install bear # notepad
 brew install neofetch     # system environment show
 brew install wireguard-go #This is an implementation of WireGuard in Go.
