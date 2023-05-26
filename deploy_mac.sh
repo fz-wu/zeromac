@@ -15,6 +15,7 @@ brew tap homebrew/cask-fonts
 brew tap FelixKratz/formulae
 
 # Brew Formulae
+brew install aria2
 brew install gsl       #The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers.
 brew install llvm      # copmplier for mac
 brew install gcc       # gcc just gcc
@@ -35,9 +36,9 @@ brew install python@3.10
 brew install stow # congig dotfiles
 brew install tmux # session manager
 # brew install bear # notepad
+# brew install yadm
 brew install neofetch     # system environment show
 brew install wireguard-go #This is an implementation of WireGuard in Go.
-brew install mactex
 brew install starship # starship
 brew install dooit    # TUI todo manager
 brew install zsh-autosuggestions
@@ -62,6 +63,16 @@ brew install --cask hex-fiend
 brew install --cask cutter
 brew install --cask font-hack-nerd-font
 brew install --cask iina
+brew install --cask finalshell
+brew install --cask font-hack-nerd-font
+brew install --cask google-chrome
+brew install --cask mactex
+brew install --cask sf-symbols
+brew install --cask visual-studio-code
+brew install --cask steam
+brew install --cask wechat
+brew install --cask zerotier-one
+
 # Mac App Store Apps
 echo "Installing Mac App Store Apps..."
 mas install 1451685025 #Wireguard
@@ -118,9 +129,6 @@ rm -rf /tmp/SFMono_Nerd_Font/
 
 # SketchyBar config
 brew install --cask sf-symbols
-brew install jq
-brew install gh
 brew install switchaudio-osx
 curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.4/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
-
 brew services start sketchybar
