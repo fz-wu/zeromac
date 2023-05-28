@@ -6,7 +6,7 @@ xcode-select --install
 
 # Install Brew
 echo "Installing Brew..."
-/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" speed
+#/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" speed
 brew analytics off
 
 # Brew Taps
@@ -52,7 +52,6 @@ brew install zsh-vi-mode # use vim in zsh
 
 # Brew Casks
 echo "Installing Brew Casks..."
-brew install --cask mumble
 brew install --cask monitorcontrol
 brew install --cask sloth
 brew install --cask zoom
@@ -117,10 +116,6 @@ defaults write com.apple.Safari com.apple.Safari.ContentPageGroupIdentifier.WebK
 defaults write NSGlobalDomain WebKitDeveloperExtras -bool true
 defaults write com.apple.mail AddressesIncludeNameOnPasteboard -bool false
 
-# Copying and checking out configuration files
-echo "Planting Configuration Files..."
-[ ! -d "$HOME/dotfiles" ] && git clone --bare git@github.com:FelixKratz/dotfiles.git $HOME/dotfiles
-git --git-dir=$HOME/dotfiles/ --work-tree=$HOME checkout master
 
 # Installing Fonts
 git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono_Nerd_Font
