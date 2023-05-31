@@ -2,20 +2,21 @@
 
 # Install xCode cli tools
 echo "Installing commandline tools..."
-xcode-select --install
+xcode-select --install && echo "Installing Brew..."
 
 # Install Brew
-echo "Installing Brew..."
-#/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" speed
-brew analytics off
+
+/bin/zsh -c "$(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)" && brew analytics off
 
 # Brew Taps
 echo "Installing Brew Formulae..."
 brew tap homebrew/cask-fonts
 brew tap FelixKratz/formulae
 
-# Brew Formulae
+# downloader 
 brew install aria2
+brew install wget
+#tools for clang
 brew install gsl       #The GNU Scientific Library (GSL) is a numerical library for C and C++ programmers.
 brew install llvm      # copmplier for mac
 brew install gcc       # gcc just gcc
@@ -23,41 +24,47 @@ brew install ccls      # ccls, which originates from cquery, is a C/C++/Objectiv
 brew install boost     # Boost provides free peer-reviewed portable C++ source libraries.
 brew install libomp    # LLVM's OpenMP runtime library
 brew install armadillo # Armadillo is a high quality linear algebra library (matrix maths) for the C++ language
+# editor 
 brew install neovim
 brew install tree
-brew install wget
+# python
+brew install python@3.10
+brew install pyenv          # python vesion manager
+brew install pyenv-virtualenv 
+# useful tools
 brew install jq      # json parse
 brew install gh      # GitHub command-line tool
 brew install ripgrep # a pro grep
-brew install rename
-brew install pyenv          # python vesion manager
+
 brew install proxychains-ng # proxy commandline
-brew install python@3.10
 brew install stow # congig dotfiles
 brew install tmux # session manager
-# brew install bear # notepad
-# brew install yadm
+# brew install yadm # windows manager like i3wm
+brew install iterm2 # termial
 brew install neofetch     # system environment show
 brew install wireguard-go #This is an implementation of WireGuard in Go.
-brew install starship # starship
 brew install dooit    # TUI todo manager
+# zsh
+sh -c "$(curl -fsSL https://raw.github.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
 brew install zsh-autosuggestions
 brew install zsh-syntax-highlighting
-brew install svim
+brew install zsh-vi-mode # use vim in zsh
+
+brew install svim # operate safari like vim 
 brew install sf-symbols # SF Symbols is the system icon framework
 brew install switchaudio-osx
 brew install lazygit
 brew install btop
-brew install zsh-vi-mode # use vim in zsh
-
+brew install firefox 
+brew install ipfs
+brew install zsh-autosuggestions
+brew install zsh-syntax-highlighting
+brew install chezmoi
 # Brew Casks
 echo "Installing Brew Casks..."
 brew install --cask monitorcontrol
 brew install --cask sloth
 brew install --cask zoom
-brew install --cask skim
-brew install --cask meetingbar
-brew install --cask machoview
 brew install --cask hex-fiend
 brew install --cask cutter
 brew install --cask font-hack-nerd-font
@@ -76,7 +83,6 @@ brew install --cask zerotier-one
 echo "Installing Mac App Store Apps..."
 mas install 1451685025 #Wireguard
 mas install 497799835  #xCode
-mas install 1480933944 #Vimari
 
 # macOS Settings
 echo "Changing macOS defaults..."
@@ -122,8 +128,3 @@ git clone git@github.com:shaunsingh/SFMono-Nerd-Font-Ligaturized.git /tmp/SFMono
 mv /tmp/SFMono_Nerd_Font/* $HOME/Library/Fonts
 rm -rf /tmp/SFMono_Nerd_Font/
 
-# SketchyBar config
-brew install --cask sf-symbols
-brew install switchaudio-osx
-curl -L https://github.com/kvndrsslr/sketchybar-app-font/releases/download/v1.0.4/sketchybar-app-font.ttf -o $HOME/Library/Fonts/sketchybar-app-font.ttf
-brew services start sketchybar
